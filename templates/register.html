@@ -10,15 +10,16 @@
 		<div align="center">
 		<div align="center" class="border">
 			<div class="header">
-				<h1 class="word">Register</h1>
+				<h1 class="word">Welcome the NBA Database</h1>
 			</div></br></br></br>
 			<h2 class="word">
 				<form action="{{ url_for('auth_api.register') }}" method="post">
-				<div class="msg">{{ msg }}</div>
+				<div class="msg"> Everything you wonder about the NBA </div>
+				<div><br>Sign Up</div>
 					<input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox"/></br></br>
 
 					<input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/></br></br>
-					{% with messages = get_flashed_messages() %}
+					<!--{% with messages = get_flashed_messages() %}
 					{% if messages %}
 					  <ul class=flashes>
 					  {% for message in messages %}
@@ -27,7 +28,7 @@
 					  </ul>
 					{% endif %}
 				  {% endwith %}
-				  {% block body %}{% endblock %}
+				  {% block body %}{% endblock %}-->
 					<input type="submit" class="btn" value="Sign Up"></br>
 				</form>
 			</h2>
