@@ -10,6 +10,12 @@
         <link rel="icon" type="image/x-icon" href="nba.ico">		
 	</head>
 	<body></br></br></br></br></br>
+  
+  <ul>
+    <li><a class="active" href="{{url_for('auth_api.mainpage')}}">Home</a></li>
+    <li><a href="{{url_for('auth_api.userpage')}}">Profile</a></li>
+  </ul>
+  
 
 		<div align="center">
 		<div align="center" class="border">
@@ -25,9 +31,13 @@
 					<div class="dropdown">
                         <button class="dropbtn">Season</button>
                         <div class="dropdown-content">
-                          <a href="#">Link 1</a>
-                          <a href="#">Link 2</a>
-                          <a href="#">Link 3</a>
+                          <table>
+                              {% for row in test %}
+                              <tr>
+                                <th> {{ row[0] }}</th>
+                              </tr> 
+                              {% endfor %}
+                          </table>
                         </div>
                     </div>
 
